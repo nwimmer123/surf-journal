@@ -27212,7 +27212,7 @@
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27224,10 +27224,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Card = __webpack_require__(238);
-
-	var _Card2 = _interopRequireDefault(_Card);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27235,8 +27231,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	// import {Card, CardTitle} from 'material-ui';
 
 	var Home = function (_React$Component) {
 	  _inherits(Home, _React$Component);
@@ -27248,15 +27242,15 @@
 	  }
 
 	  _createClass(Home, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        _Card2.default,
-	        { className: 'container' },
+	        "div",
+	        { className: "container" },
 	        _react2.default.createElement(
-	          'h2',
+	          "h2",
 	          null,
-	          'Surf Journal'
+	          "Welcome!"
 	        )
 	      );
 	    }
@@ -32256,7 +32250,7 @@
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -32269,8 +32263,6 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	var _reactRouter = __webpack_require__(172);
-
-	var _materialUi = __webpack_require__(291);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32290,7 +32282,7 @@
 	  }
 
 	  _createClass(LoginForm, [{
-	    key: 'processForm',
+	    key: "processForm",
 	    value: function processForm(event) {
 	      event.preventDefault();
 
@@ -32298,43 +32290,47 @@
 	      console.log("password:", this.refs.password.getValue());
 	    }
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        _materialUi.Card,
-	        { 'class': 'container' },
+	        "div",
+	        { className: "form-group" },
 	        _react2.default.createElement(
-	          'form',
-	          { action: '/', onSubmit: this.processForm.bind(this) },
+	          "form",
+	          { action: "/", onSubmit: this.processForm.bind(this) },
 	          _react2.default.createElement(
-	            'h2',
-	            { className: 'card-heading' },
-	            'Log In'
-	          ),
-	          _react2.default.createElement(_materialUi.CardTitle, { title: 'Login with Email' }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'field-line' },
-	            _react2.default.createElement(_materialUi.TextField, { ref: 'email', floatingLabelText: 'Email' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'field-line' },
-	            _react2.default.createElement(_materialUi.TextField, { ref: 'password', floatingLabelText: 'Password', type: 'password' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-line' },
-	            _react2.default.createElement(_materialUi.RaisedButton, { type: 'submit', label: 'Login', primary: true })
-	          ),
-	          _react2.default.createElement(
-	            _materialUi.CardText,
+	            "h2",
 	            null,
-	            'Don\'t have an account? ',
+	            "Log In"
+	          ),
+	          _react2.default.createElement(
+	            "h4",
+	            null,
+	            "Login with Email"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form-group" },
+	            _react2.default.createElement("input", { type: "email", className: "form-control", placeholder: "Enter email" })
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form-group" },
+	            _react2.default.createElement("input", { type: "password", className: "form-control", placeholder: "Password" })
+	          ),
+	          _react2.default.createElement(
+	            "button",
+	            { type: "submit", claclassNamess: "btn btn-primary" },
+	            "Submit"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            null,
+	            "Don't have an account? ",
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: '/signup' },
-	              'Create one'
+	              { to: "/signup" },
+	              "Create one"
 	            )
 	          )
 	        )

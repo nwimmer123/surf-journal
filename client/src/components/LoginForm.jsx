@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from 'react-router';
-import {Card, CardTitle, CardText, RaisedButton, TextField} from 'material-ui';
 
 class LoginForm extends React.Component {
 
@@ -13,26 +12,28 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <Card class="container">
-        <form action="/" onSubmit={this.processForm.bind(this)}>
-          <h2 className="card-heading">Log In</h2>
+      
+        <div className="form-group">
+          <form action="/" onSubmit={this.processForm.bind(this)}>
 
-          <CardTitle title="Login with Email" />
+            <h2>Log In</h2>
+            <h4>Login with Email</h4>
 
-          <div className="field-line">
-            <TextField ref="email" floatingLabelText="Email" />
-          </div>
+            <div className="form-group">
+              <input type="email" className="form-control" placeholder="Enter email" />
+            </div>
 
-          <div className="field-line">
-            <TextField ref="password" floatingLabelText="Password" type="password" />
-          </div>
+            <div className="form-group">
+              <input type="password" className="form-control" placeholder="Password" />
+            </div>
 
-          <div className="button-line">
-            <RaisedButton type="submit" label="Login" primary={true} />
-          </div>
-          <CardText>Don't have an account? <Link to={`/signup`}>Create one</Link></CardText>
-        </form>
-      </Card>
+            <button type="submit" claclassNamess="btn btn-primary">Submit</button>
+
+            <div>Don't have an account? <Link to={`/signup`}>Create one</Link></div>
+
+          </form>
+        </div>
+   
     );
   }
 }
