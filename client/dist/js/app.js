@@ -54,6 +54,10 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
+	var _MuiThemeProvider = __webpack_require__(386);
+
+	var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+
 	var _reactRouter = __webpack_require__(172);
 
 	var _routes = __webpack_require__(235);
@@ -62,11 +66,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(
-	  'h1',
-	  null,
-	  'Shit fuck BALLS!'
-	), document.getElementById('react-app'));
+	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default }), document.getElementById('react-app'));
 
 /***/ },
 /* 1 */
@@ -27180,7 +27180,7 @@
 	                        _react2.default.createElement(
 	                            _reactRouter.IndexLink,
 	                            { to: '/' },
-	                            'React App'
+	                            'Surf Journal'
 	                        )
 	                    ),
 	                    _react2.default.createElement(

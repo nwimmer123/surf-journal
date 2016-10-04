@@ -7,7 +7,7 @@ class Base extends React.Component {
             <div>
                 <div className="top-bar">
                     <div className="top-bar-left">
-                        <IndexLink to="/">React App</IndexLink>
+                        <IndexLink to="/">Surf Journal</IndexLink>
                     </div>
 
                 <div className="top-bar-right">

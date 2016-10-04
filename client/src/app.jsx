@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {browserHistory, Router} from 'react-router';
 import routes from './config/routes.js';
 
-ReactDom.render(<h1>Shit fuck BALLS!</h1>, document.getElementById('react-app'));
+ReactDom.render((<Router history={browserHistory} routes={routes} />), document.getElementById('react-app'));

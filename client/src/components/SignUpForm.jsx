@@ -3,15 +3,15 @@ import {Link} from 'react-router';
 import {Card, CardTitle, CardText, RaisedButton, TextField} from 'material-ui';
 
 class SignUpForm extends React.Component {
-processForm(event) {
-  event.preventDefault();
-  console.log("name:", this.refs.name.getValue());
-  console.log("email:", this.refs.email.getValue());
-  console.log("password:", this.refs.password.getValue());
-}
+  processForm(event) {
+    event.preventDefault();
+    console.log("name:", this.refs.name.getValue());
+    console.log("email:", this.refs.email.getValue());
+    console.log("password:", this.refs.password.getValue());
+  }
 
-render() {
-  return (
+  render() {
+    return (
       <Card className="container">
         <form action="/" onSubmit={this.processForm.bind(this)}>
           <h2 className="card-heading">Sign Up</h2>
