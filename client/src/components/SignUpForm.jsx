@@ -12,31 +12,34 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <Card className="container">
+      <div className="container">
         <form action="/" onSubmit={this.processForm.bind(this)}>
-          <h2 className="card-heading">Sign Up</h2>
+          <div className="container form-group">
+            <div className="container"> 
+              <h2>Sign Up</h2>
+              <h4>Sign Up with Email</h4>
+            </div>
 
-          <CardTitle title="Sign Up with Email" />
+            <div className="form-group">
+              <input type="text" value="name" placeholder="Name" />
+            </div>
 
-          <div className="field-line">
-            <TextField ref="name" floatingLabelText="Name" />
+            <div className="form-group">
+              <input value="email" placeholder="Email" />
+            </div>
+
+            <div className="form-group">
+              <input value="password" placeholder="Password" type="password" />
+            </div>
+
+            <div className="button-line">
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </div>
+
+            <div>Already have an account? <Link to={'/login'}>Log in</Link></div>
           </div>
-
-          <div className="field-line">
-            <TextField ref="email" floatingLabelText="Email" />
-          </div>
-
-          <div className="field-line">
-            <TextField ref="password" floatingLabelText="Password" type="password" />
-          </div>
-
-          <div className="button-line">
-            <RaisedButton type="submit" label="Create New Account" primary={true} />
-          </div>
-
-          <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
         </form>
-      </Card>
+      </div>
     );
   }
 
